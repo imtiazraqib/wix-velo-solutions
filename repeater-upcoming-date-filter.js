@@ -9,9 +9,9 @@ import wixData from 'wix-data';
 
 $w.onReady(function () {
 
-    $w("#GameScheduleDataset").onReady(() => {
+    $w("#DATASET_NAME").onReady(() => {
         let sToday = new Date();
-        $w("#GameScheduleDataset").setFilter(wixData.filter().ge("gameDateTime", sToday))
+        $w("#DATASET_NAME").setFilter(wixData.filter().ge("DATE_FIELD_KEY", sToday))
 		.then( () => {
 			console.log("Dataset is now filtered");
 			} )
